@@ -221,36 +221,6 @@ void modelBind3(const ESModel* mdl)
 //*************************************
 // game functions
 //*************************************
-void resetGhost(uint i)
-{
-    const float radius = esRandFloat(20.f, 42.f);
-    const float angle = esRandFloat(-PI, PI);
-    ghost_pos[i] = (vec){radius*cosf(angle), radius*sinf(angle), -1.f};
-    ghost_tgt[i] = esRand(0, 14);
-    if(friend_pos[ghost_tgt[i]].z <= -0.74f)
-    {
-        uint fail = 1;
-        for(uint j = 0; j < 15; j++)
-        {
-            if(friend_pos[j].z > -0.74f)
-            {
-                ghost_tgt[i] = j;
-                fail = 0;
-                break;
-            }
-        }
-        if(fail == 1)
-        {
-            ghost_tgt[i] = -1;
-            return;
-        }
-    }
-    ghost_dir[i] = friend_pos[ghost_tgt[i]];
-    vSub(&ghost_dir[i], ghost_dir[i], ghost_pos[i]);
-    ghost_dir[i].z = 0.f;
-    vNorm(&ghost_dir[i]);
-    ghost_opa[i] = 1.f;
-}
 void retargetGhost(uint i)
 {
     ghost_tgt[i] = esRand(0, 14);
@@ -276,6 +246,14 @@ void retargetGhost(uint i)
     vSub(&ghost_dir[i], ghost_dir[i], ghost_pos[i]);
     ghost_dir[i].z = 0.f;
     vNorm(&ghost_dir[i]);
+}
+void resetGhost(uint i)
+{
+    const float radius = esRandFloat(20.f, 42.f);
+    const float angle = esRandFloat(-PI, PI);
+    ghost_pos[i] = (vec){radius*cosf(angle), radius*sinf(angle), -1.f};
+    retargetGhost(i);
+    ghost_opa[i] = 1.f;
 }
 void newGame(unsigned int seed)
 {
@@ -306,6 +284,7 @@ void newGame(unsigned int seed)
 }
 void updateTitle()
 {
+    if(t < 8.f){return;}
     friendsalive = 0;
     for(uint i = 0; i < 15; i++)
     {
