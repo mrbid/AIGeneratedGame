@@ -1,8 +1,8 @@
 ![Screenshot of the Tuxocide game](https://raw.githubusercontent.com/mrbid/AIGeneratedGame/main/screenshot.png)
 
-**Play Online:** https://mrbid.github.io/tuxocide
+**Play Online:** https://mrbid.github.io/aigeneratedgame
 
-**Snapcraft:** https://snapcraft.io/tuxocide
+**Snapcraft:** https://snapcraft.io/aigeneratedgame
 
 **Latest upto date repository at:** https://notabug.org/Vandarin/AIGeneratedGame
 
