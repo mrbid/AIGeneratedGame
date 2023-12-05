@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=AI Generated Game
+Comment=Save your garden friends from the ghosts!
+StartupNotify=false
+Exec=aigeneratedgame
+Icon=aigeneratedgame
+Terminal=false
+Type=Application
+Categories=Game;ArcadeGame;KidsGame;Graphics

@@ -1,0 +1,51 @@
+name: aigeneratedgame
+base: core22
+version: '1.0'
+license: GPL-2.0-only
+summary: 3D FPS a war rages on in antarctica...
+description: |
+  Save your garden friends from the ghosts! BONK BONK!
+
+  Mouse locks when you click on the window, press ESCAPE to unlock the mouse.
+
+  W,A,S,D / Arrow Keys = Move
+  L-SHIFT / R-CTRL = Sprint
+  Left Click = Shoot
+  Right Click = Zoom
+  F = FPS to console
+  N = New Game and Seed
+
+grade: stable
+confinement: strict
+
+architectures:
+  - build-on: [amd64]
+    build-for: [amd64]
+  - build-on: [arm64]
+    build-for: [arm64]
+  - build-on: [armhf]
+    build-for: [armhf]
+
+apps:
+  aigeneratedgame:
+    extensions: [gnome]
+    command: aigeneratedgame
+    plugs:
+    - desktop
+    - desktop-legacy
+    - gsettings
+    - opengl
+    - wayland
+    - x11
+
+parts:
+  aigeneratedgame:
+    source: https://github.com/mrbid/AIGeneratedGame
+    source-type: git
+    plugin: make
+    source-subdir: snap
+    build-packages:
+    - libglfw3-dev
+    stage-packages:
+    - libglfw3
+    - libgles2
