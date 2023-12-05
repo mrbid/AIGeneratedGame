@@ -9,4 +9,4 @@
 *This repository was only created for the Snapcraft submission.*
 
 ## attribution
-* Font is [Slimespooky](https://www.fontspace.com/slimespooky-font-f84976) by [Jadaakbal](https://www.fontspace.com/jadatype)
+* Font is [Slimespooky](https://www.fontspace.com/slimespooky-font-f84976) by [Jada Akbal](https://www.fontspace.com/jadatype)
