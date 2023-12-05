@@ -1,12 +1,14 @@
 ![Screenshot of the Tuxocide game](https://raw.githubusercontent.com/mrbid/AIGeneratedGame/main/screenshot.png)
 
-**Play Online:** https://mrbid.github.io/aigeneratedgame
-
-**Snapcraft:** https://snapcraft.io/aigeneratedgame
+* **Play Online:** https://mrbid.github.io/aigeneratedgame
+* **Flathub:** https://flathub.org/apps/com.voxdsp.aigeneratedgame
+* **Snapcraft:** https://snapcraft.io/aigeneratedgame
 
 **Latest upto date repository at:** https://notabug.org/Vandarin/AIGeneratedGame
 
 *This repository was only created for the Snapcraft submission.*
+
+If you are running this on low performance hardware consider compiling with `make low` or `make med'.
 
 ## controls
 *Mouse locks when you click on the window, press ESCAPE to unlock the mouse.*
