@@ -8,7 +8,7 @@
 
 *This repository was only created for the Snapcraft submission.*
 
-If you are running this on low performance hardware consider compiling with `make low` or `make med'.
+If you are running this on low performance hardware consider compiling with `make low` or `make med`.
 
 ## controls
 *Mouse locks when you click on the window, press ESCAPE to unlock the mouse.*
