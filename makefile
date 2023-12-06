@@ -4,12 +4,7 @@ all:
 	cc main.c glad_gl.c -I inc -Ofast -lglfw -lm -o release/aigeneratedgame
 	strip --strip-unneeded release/aigeneratedgame
 	upx --lzma --best release/aigeneratedgame
-tri:
-	cc assets/ptf.c -lm -Ofast -o assets/ptf
-	mkdir -p release
-	cc -DQUALITY_TRI main.c glad_gl.c -I inc -Ofast -lglfw -lm -o release/aigeneratedgame_tri
-	strip --strip-unneeded release/aigeneratedgame_tri
-	upx --lzma --best release/aigeneratedgame_tri
+
 med:
 	cc assets/ptf.c -lm -Ofast -o assets/ptf
 	mkdir -p release
