@@ -77,7 +77,6 @@ GLint opacity_id;
 
 // render state
 mat projection, view, model, modelview;
-vec lightpos = {0.f, 0.f, 0.f};
 
 // models
 ESModel mdlIntro;
@@ -430,7 +429,6 @@ void main_loop()
     // shader program change
     shadeLambert3(&position_id, &projection_id, &modelview_id, &lightpos_id, &normal_id, &color_id, &opacity_id);
     glUniformMatrix4fv(projection_id, 1, GL_FALSE, (float*)&projection.m[0][0]);
-    glUniform3f(lightpos_id, lightpos.x, lightpos.y, lightpos.z);
 
     // render scene
     glUniformMatrix4fv(modelview_id, 1, GL_FALSE, (float*)&view.m[0][0]);
@@ -875,7 +873,7 @@ void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
                 }
             }
         }
-        if(button == GLFW_MOUSE_BUTTON_RIGHT)
+        else if(button == GLFW_MOUSE_BUTTON_RIGHT)
         {
             mIdent(&projection);
             mPerspective(&projection, 30.0f, aspect, 0.01f, FAR_DISTANCE);
@@ -1126,7 +1124,6 @@ int main(int argc, char** argv)
 
     shadeLambert3(&position_id, &projection_id, &modelview_id, &lightpos_id, &normal_id, &color_id, &opacity_id);
     glUniformMatrix4fv(projection_id, 1, GL_FALSE, (float*)&projection.m[0][0]);
-    glUniform3f(lightpos_id, lightpos.x, lightpos.y, lightpos.z);
     window_size_callback(window, winw, winh);
 
 //*************************************
