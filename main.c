@@ -63,7 +63,7 @@
 const char appTitle[]="☃️ AI Generated Game ❄️ (Meshy.ai) 🤖";
 GLFWwindow* window;
 uint winw=1024, winh=768;
-float t=0.f, dt=0.f, st=0.f, fc=0.f, lfct=0.f, aspect;
+float t=0.f, dt=0.f, lt=0.f, ltut=0.f, st=0.f, fc=0.f, lfct=0.f, aspect;
 double mx,my,lx,ly,ww,wh;
 
 // render state id's
@@ -264,6 +264,8 @@ void newGame(unsigned int seed)
     octo_pos = (vec){3.f, 1.f, 0.f};
     octo_dir = (vec){0.f, -1.f, 0.f};
     octo_tgt = -1;
+    lt = 0.f;
+    ltut = 0.f;
 
     for(uint i = 0; i < 15; i++)
         friend_pos[i].z = 0.f;
@@ -304,7 +306,6 @@ void main_loop()
 //*************************************
     fc++;
     glfwPollEvents();
-    static float lt = 0;
     t = (float)glfwGetTime();
     dt = t-lt;
     lt = t;
@@ -326,13 +327,10 @@ void main_loop()
 //*************************************
 
     // update title every second
+    if(t > ltut)
     {
-        static float lt = 0.f;
-        if(t > lt)
-        {
-            updateTitle();
-            lt = t + 1.0f;
-        }
+        updateTitle();
+        ltut = t + 1.0f;
     }
 
     // forward & backward
