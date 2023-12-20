@@ -14,7 +14,7 @@ If you are running this on low performance hardware consider compiling with `mak
 *Mouse locks when you click on the window, press ESCAPE to unlock the mouse.*
 
 * W,A,S,D / Arrow Keys = Move
-* L-SHIFT / R-CTRL = Sprit
+* L-SHIFT / R-CTRL = Sprint
 * Left Click = Shoot
 * Right Click = Zoom
 
