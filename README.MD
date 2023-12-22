@@ -1,4 +1,4 @@
-![Screenshot of the Tuxocide game](https://raw.githubusercontent.com/mrbid/AIGeneratedGame/main/screenshot.png)
+[![Screenshot of the AI Generated Game](https://raw.githubusercontent.com/mrbid/AIGeneratedGame/main/screenshot.png)](https://www.youtube.com/watch?v=7jJYHykpN9A)
 
 * **Play Online:** https://mrbid.github.io/aigeneratedgame
 * **Flathub:** https://flathub.org/apps/com.voxdsp.aigeneratedgame
