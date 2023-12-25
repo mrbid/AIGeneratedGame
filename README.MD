@@ -1,14 +1,13 @@
 [![Screenshot of the AI Generated Game](https://raw.githubusercontent.com/mrbid/AIGeneratedGame/main/screenshot.png)](https://www.youtube.com/watch?v=7jJYHykpN9A)
 
+### Save your garden friends from the ghosts! BONK BONK!
+
 * **Play Online:** https://mrbid.github.io/aigeneratedgame
 * **Flathub:** https://flathub.org/apps/com.voxdsp.aigeneratedgame
 * **Snapcraft:** https://snapcraft.io/aigeneratedgame
+* **Windows:** [AIGeneratedGame_win.zip](https://github.com/mrbid/AIGeneratedGame/releases/download/windows/AIGeneratedGame_win.zip)
 
-**Latest upto date repository at:** https://notabug.org/Vandarin/AIGeneratedGame
-
-*This repository was only created for the Snapcraft submission.*
-
-If you are running this on low performance hardware consider compiling with `make low` or `make med`.
+*If you are running this on low performance hardware consider compiling with `make low` or `make med`.*
 
 ## controls
 *Mouse locks when you click on the window, press ESCAPE to unlock the mouse.*
